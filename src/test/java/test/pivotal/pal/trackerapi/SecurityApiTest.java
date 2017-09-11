@@ -1,5 +1,6 @@
 package test.pivotal.pal.trackerapi;
 
+
 import io.pivotal.pal.tracker.PalTrackerApplication;
 import org.junit.Before;
 import org.junit.Test;
@@ -30,8 +31,8 @@ public class SecurityApiTest {
     @Before
     public void setUp() throws Exception {
         RestTemplateBuilder builder = new RestTemplateBuilder()
-            .rootUri("http://localhost:" + port)
-            .basicAuthorization("user", "password");
+                .rootUri("http://localhost:" + port)
+                .basicAuthorization("user", "password");
 
         authorizedRestTemplate = new TestRestTemplate(builder);
     }
